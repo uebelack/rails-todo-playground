@@ -30,5 +30,6 @@ group :test do
   gem 'minitest-reporters'
   gem 'shoulda'
   gem 'simplecov'
+  gem 'simplecov-lcov'
   gem 'test-unit'
 end
