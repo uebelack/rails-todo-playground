@@ -25,7 +25,7 @@ jobs:
           bin/bundle exec brakeman -q -w2
       - name: Run tests
         run: |
-          bin/rails test
+          bin/bundle exec rails test
           cat coverage/lcov.info
       - name: Coveralls
         uses: coverallsapp/github-action@master
