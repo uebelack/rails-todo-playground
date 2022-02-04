@@ -26,8 +26,8 @@ class TodosController < ApplicationController
   end
 
   def destroy
-      Todo.find(params[:id]).destroy!
-      redirect_to action: 'index'
+    Todo.find(params[:id]).destroy!
+    redirect_to action: 'index'
   end
 
   private

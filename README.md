@@ -27,7 +27,7 @@
 MIT License. See `LICENSE.txt` for more information.
 
 
-[build-shield]: https://img.shields.io/github/workflow/status/hackercowboy/rails-todo-playground/CI.svg?style=for-the-badge
+[build-shield]: https://img.shields.io/github/workflow/status/hackercowboy/rails-todo-playground/Verify.svg?style=for-the-badge
 [build-url]: https://github.com/hackercowboy/rails-todo-playground/actions/workflows/main.yml
 [language-shield]: https://img.shields.io/github/languages/top/hackercowboy/rails-todo-playground.svg?style=for-the-badge
 [language-url]: https://github.com/hackercowboy/rails-todo-playground
