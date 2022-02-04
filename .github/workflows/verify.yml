@@ -22,8 +22,8 @@ jobs:
           bin/rails test
       - name: Run linters
         run: |
-          bin/rubocop
+          bin/bundle exec rubocop
       - name: Run security checks
         run: |
-          bin/brakeman -q -w2
+          bin/bundle exec brakeman -q -w2
   
