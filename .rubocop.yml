@@ -6,3 +6,5 @@ AllCops:
     - bin/*
 Style/Documentation:
   Enabled: false
+Style/ConditionalAssignment:
+  EnforcedStyle: assign_inside_condition

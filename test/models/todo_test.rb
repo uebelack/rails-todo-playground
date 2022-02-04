@@ -13,4 +13,9 @@ class TodoTest < ActiveSupport::TestCase
     assert_not_nil todo.text
     assert_equal 'pending', todo.status
   end
+
+  test 'todo initialize status to pending' do
+    todo = Todo.new
+    assert_equal 'pending', todo.status
+  end
 end

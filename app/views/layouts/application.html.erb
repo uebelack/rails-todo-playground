@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsTodoPlayground</title>
+    <title>Rails Todo Playground</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "application" %>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
-
   <body>
-    <%= yield %>
+    <main>
+      <h1>Rails Todo Playground</h1>
+      <div class="container">
+        <%= yield %>
+      </div>
+    </main>
   </body>
 </html>

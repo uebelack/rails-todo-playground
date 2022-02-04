@@ -13,3 +13,108 @@
  *= require_tree .
  *= require_self
  */
+
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+  font-size: 20px;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+}
+
+.container {
+  margin: 20px;
+  border: 1px solid #ccc;
+}
+
+form {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.todo-form {
+  padding: 20px 20px 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  font-size: 20px;
+  line-height: 20px;
+  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+  padding: 10px 10px 5px;
+}
+
+.error-list {
+  padding: 0 20px 10px;
+  margin: 0;
+}
+
+.error-list-item {
+  list-style: none;
+  color: #FF0000;
+}
+
+
+.todo-list {
+  padding: 10px 0 0;
+  margin: 0;
+}
+
+.todo-list-item {
+  list-style: none;
+  padding: 10px 20px; 
+  border-bottom: 1px solid #ccc;
+  display: flex;
+}
+
+.todo-list-item:first-child {
+  border-top: 1px solid #ccc;
+}
+
+.todo-list-item-text,
+.todo-list-item-action {
+  display: block;
+}
+
+.todo-list-item-text {
+  display: flex;
+  flex-grow: 1;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.delete-button,
+.update-button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  color: transparent;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.delete-button {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyBjbGFzcz0idy02IGgtNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTE5IDdsLS44NjcgMTIuMTQyQTIgMiAwIDAxMTYuMTM4IDIxSDcuODYyYTIgMiAwIDAxLTEuOTk1LTEuODU4TDUgN201IDR2Nm00LTZ2Nm0xLTEwVjRhMSAxIDAgMDAtMS0xaC00YTEgMSAwIDAwLTEgMXYzTTQgN2gxNiI+PC9wYXRoPjwvc3ZnPg==');
+}
+
+.update-button {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyBjbGFzcz0idy02IGgtNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTkgMTJsMiAyIDQtNG02IDJhOSA5IDAgMTEtMTggMCA5IDkgMCAwMTE4IDB6Ij48L3BhdGg+PC9zdmc+');
+}
+
