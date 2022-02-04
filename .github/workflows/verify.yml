@@ -26,7 +26,6 @@ jobs:
       - name: Run tests
         run: |
           bin/rails test
-          cat coverage/lcov.info
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
