@@ -26,7 +26,11 @@ class TodosController < ApplicationController
   end
 
   def destroy
-    Todo.find(params[:id]).destroy!
+    begin
+      Todo.find(params[:id]).destroy!
+    rescue ActiveRecord::RecordNotFound
+      # that's fine
+    end
     redirect_to action: 'index'
   end
 

@@ -43,6 +43,7 @@ class TodosControllerTest < ActionDispatch::IntegrationTest
   test 'should handle errors during creation' do
     post todos_url, params: { todo: { status: 'pending' } }
     assert_response :ok
+    assert_select '.error-list-item', "Text can't be blank"
   end
 
   test 'should update a todo' do
@@ -56,9 +57,21 @@ class TodosControllerTest < ActionDispatch::IntegrationTest
     assert_equal 'done', todo.status
   end
 
+  test 'should handle errors during update' do
+    todo = create(:todo, text: 'Test', status: 'pending')
+    patch todo_url(todo.id), params: { todo: { text: 'Text', status: '' } }
+    assert_response :ok
+    assert_select '.error-list-item', "Status can't be blank"
+  end
+
   test 'should delete a todo' do
     todo = create(:todo)
     delete todo_url(todo.id)
     assert_raise(ActiveRecord::RecordNotFound) { assert todo.reload }
+  end
+
+  test 'should ignore non existing todo' do
+    delete todo_url('fdsa')
+    assert_response :redirect
   end
 end
