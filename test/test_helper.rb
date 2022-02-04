@@ -8,12 +8,8 @@ SimpleCov::Formatter::LcovFormatter.config do |c|
   c.single_report_path = 'coverage/lcov.info'
 end
 
-SimpleCov.formatters = SimpleCov::Formatter::MultiFormatter.new(
-  [
-    SimpleCov::Formatter::LcovFormatter,
-    SimpleCov::Formatter::HTMLFormatter
-  ]
-)
+SimpleCov.formatters = SimpleCov::Formatter::LcovFormatter if ENV['CI']
+SimpleCov.formatters = SimpleCov::Formatter::HTMLFormatter unless ENV['CI']
 SimpleCov.start('rails')
 
 ENV['RAILS_ENV'] ||= 'test'
