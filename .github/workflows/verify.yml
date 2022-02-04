@@ -24,8 +24,10 @@ jobs:
         run: |
           bin/bundle exec brakeman -q -w2
       - name: Run tests
+        env:
+          DISABLE_SPRING: 1
         run: |
-          bin/bundle exec rails test
+          bin/rails test
           cat coverage/lcov.info
       - name: Coveralls
         uses: coverallsapp/github-action@master
