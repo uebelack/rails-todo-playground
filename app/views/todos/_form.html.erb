@@ -1,0 +1,10 @@
+<%= form_with model: Todo.new, :class => 'todo-form' do |form| %>
+  <%= form.text_field :text, autofocus: true, placeholder: 'Add new Todo' %>
+<% end %>
+<% if @errors %>
+<ul class="error-list">
+  <% @errors.each do |error| %>
+    <li class="error-list-item"><%= error %></li>
+  <% end %>  
+</ul>
+<% end %>

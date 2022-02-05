@@ -6,23 +6,25 @@ class TodosController < ApplicationController
   end
 
   def create
+    @todos = Todo.all.order(:status, created_at: :desc)
     begin
       Todo.create!(todo_params)
+      redirect_to action: 'index'
     rescue ActiveRecord::RecordInvalid => e
       @errors = e.record.errors.map(&:full_message)
+      render action: 'index', status: :unprocessable_entity
     end
-    @todos = Todo.all.order(:status, created_at: :desc)
-    render action: 'index'
   end
 
   def update
+    @todos = Todo.all.order(:status, created_at: :desc)
     begin
       Todo.find(params[:id]).update!(todo_params)
+      redirect_to action: 'index'
     rescue ActiveRecord::RecordInvalid => e
       @errors = e.record.errors.map(&:full_message)
+      render action: 'index', status: :unprocessable_entity
     end
-    @todos = Todo.all.order(:status, created_at: :desc)
-    render action: 'index'
   end
 
   def destroy
