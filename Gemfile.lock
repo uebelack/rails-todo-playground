@@ -151,7 +151,6 @@ GEM
     parallel (1.21.0)
     parser (3.1.0.0)
       ast (~> 2.4.1)
-    power_assert (2.0.1)
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -236,8 +235,6 @@ GEM
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
     strscan (3.0.1)
-    test-unit (3.5.3)
-      power_assert
     thor (1.2.1)
     timeout (0.2.0)
     tzinfo (2.0.4)
@@ -270,7 +267,6 @@ DEPENDENCIES
   spring
   sprockets-rails
   sqlite3
-  test-unit
   tzinfo-data
 
 RUBY VERSION
