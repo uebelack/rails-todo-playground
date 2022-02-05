@@ -32,7 +32,9 @@ class TodosControllerTest < ActionDispatch::IntegrationTest
 
   test 'should create a new todo and show it' do
     post todos_url, params: { todo: { text: 'Take out the trash', status: 'pending' } }
-    assert_response :ok
+    assert_response :redirect
+
+    follow_redirect!
 
     assert_equal 'Take out the trash', Todo.last.text
     assert_equal 'pending', Todo.last.status
@@ -42,14 +44,14 @@ class TodosControllerTest < ActionDispatch::IntegrationTest
 
   test 'should handle errors during creation' do
     post todos_url, params: { todo: { status: 'pending' } }
-    assert_response :ok
+    assert_response :unprocessable_entity
     assert_select '.error-list-item', "Text can't be blank"
   end
 
   test 'should update a todo' do
     todo = create(:todo, text: 'Test', status: 'pending')
     patch todo_url(todo.id), params: { todo: { text: 'Test 2', status: 'done' } }
-    assert_response :ok
+    assert_response :redirect
 
     todo.reload
 
@@ -60,7 +62,7 @@ class TodosControllerTest < ActionDispatch::IntegrationTest
   test 'should handle errors during update' do
     todo = create(:todo, text: 'Test', status: 'pending')
     patch todo_url(todo.id), params: { todo: { text: 'Text', status: '' } }
-    assert_response :ok
+    assert_response :unprocessable_entity
     assert_select '.error-list-item', "Status can't be blank"
   end
 
