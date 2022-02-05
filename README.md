@@ -22,6 +22,16 @@
 
 `rails-todo-playground` is just a small playground i use to test new rails versions, features and configuration options.
 
+## Branches
+
+This repository contains different branches with different tests of different technologies:
+
+| Branch | Description |
+|---|---|
+| [classic](https://github.com/hackercowboy/rails-todo-playground/tree/classic) | classic ruby on rails application without any javascript |
+| [hotwire](https://github.com/hackercowboy/rails-todo-playground/tree/hotwire) | improved user experience of the classic application using hotwire to only rerender needed parts of the page |
+
+
 ## License
 
 MIT License. See `LICENSE.txt` for more information.
