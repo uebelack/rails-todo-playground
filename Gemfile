@@ -5,6 +5,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.0'
 
+gem 'hotwire-rails'
+gem 'importmap-rails'
 gem 'puma'
 gem 'rails', '~> 7.0.1'
 gem 'sprockets-rails'

@@ -8,23 +8,25 @@
   <% end %>  
 </ul>
 <% end %>
-<ul class="todo-list">
-  <% @todos.each do |todo| %>
-    <li class="todo-list-item">
-      <span class="todo-list-item-text <%= todo.status%>"><%= todo.text %></span>
-      <span class="todo-list-item-action">
-        <% if todo.status == 'pending' %>
-          <%= form_with model: todo, :method => :patch do |form| %>
-            <%= form.hidden_field :status, value: 'done' %>
-            <%= form.submit 'Done', class: 'update-button' %>
+<%= turbo_frame_tag :todos do %>
+  <ul class="todo-list">
+    <% @todos.each do |todo| %>
+      <li class="todo-list-item">
+        <span class="todo-list-item-text <%= todo.status%>"><%= todo.text %></span>
+        <span class="todo-list-item-action">
+          <% if todo.status == 'pending' %>
+            <%= form_with model: todo, :method => :patch do |form| %>
+              <%= form.hidden_field :status, value: 'done' %>
+              <%= form.submit 'Done', class: 'update-button' %>
+            <% end %>
           <% end %>
-        <% end %>
-        <% if todo.status == 'done' %>
-          <%= form_with model: todo, :method => :delete do |form| %>
-            <%= form.submit 'Delete', class: 'delete-button' %>
+          <% if todo.status == 'done' %>
+            <%= form_with model: todo, :method => :delete do |form| %>
+              <%= form.submit 'Delete', class: 'delete-button' %>
+            <% end %>
           <% end %>
-        <% end %>
-      </span>
-    </li>
-  <% end %>
-</ul>
+        </span>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

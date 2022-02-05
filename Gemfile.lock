@@ -100,8 +100,15 @@ GEM
     guard-minitest (2.4.6)
       guard-compat (~> 1.2)
       minitest (>= 3.0)
+    hotwire-rails (0.1.3)
+      rails (>= 6.0.0)
+      stimulus-rails
+      turbo-rails
     i18n (1.9.1)
       concurrent-ruby (~> 1.0)
+    importmap-rails (1.0.2)
+      actionpack (>= 6.0.0)
+      railties (>= 6.0.0)
     io-console (0.5.11)
     io-wait (0.2.1)
     irb (1.4.1)
@@ -234,9 +241,14 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
+    stimulus-rails (1.0.2)
+      railties (>= 6.0.0)
     strscan (3.0.1)
     thor (1.2.1)
     timeout (0.2.0)
+    turbo-rails (1.0.1)
+      actionpack (>= 6.0.0)
+      railties (>= 6.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.1.0)
@@ -256,6 +268,8 @@ DEPENDENCIES
   faker
   guard
   guard-minitest
+  hotwire-rails
+  importmap-rails
   minitest-reporters
   puma
   rails (~> 7.0.1)
