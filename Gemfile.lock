@@ -102,6 +102,9 @@ GEM
       minitest (>= 3.0)
     i18n (1.9.1)
       concurrent-ruby (~> 1.0)
+    importmap-rails (1.0.2)
+      actionpack (>= 6.0.0)
+      railties (>= 6.0.0)
     io-console (0.5.11)
     io-wait (0.2.1)
     irb (1.4.1)
@@ -256,6 +259,7 @@ DEPENDENCIES
   faker
   guard
   guard-minitest
+  importmap-rails
   minitest-reporters
   puma
   rails (~> 7.0.1)
