@@ -19,6 +19,8 @@ end
 
 group :development do
   gem 'brakeman'
+  gem 'guard-livereload'
+  gem 'rack-livereload'
   gem 'rubocop'
   gem 'rubocop-rails'
   gem 'spring'

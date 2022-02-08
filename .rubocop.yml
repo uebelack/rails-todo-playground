@@ -9,3 +9,5 @@ Style/Documentation:
   Enabled: false
 Style/ConditionalAssignment:
   EnforcedStyle: assign_inside_condition
+Metrics/BlockLength:
+  Max: 50
