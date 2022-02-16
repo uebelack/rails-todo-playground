@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TodoForm/> should render 1`] = `
+"<Formik initialValues={{...}} onSubmit={[Function: handleOnSubmit]}>
+  <Form className=\\"todo-form\\">
+    <Field id=\\"text\\" name=\\"text\\" type=\\"text\\" placeholder=\\"Add new Todo\\" disabled={false} innerRef={{...}} />
+  </Form>
+</Formik>"
+`;

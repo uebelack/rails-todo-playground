@@ -29,3 +29,5 @@
 /config/master.key
 coverage
 test/html_reports
+
+node_modules

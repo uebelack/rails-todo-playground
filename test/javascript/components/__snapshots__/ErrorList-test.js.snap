@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ErrorList/> should render with errors 1`] = `
+"<ul className=\\"error-list\\">
+  <ErrorListItem error=\\"error1\\" />
+  <ErrorListItem error=\\"error2\\" />
+</ul>"
+`;
+
+exports[`<ErrorList/> should render without errors 1`] = `""`;

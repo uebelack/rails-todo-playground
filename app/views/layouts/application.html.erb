@@ -3,6 +3,9 @@
   <head>
     <title>Rails Todo Playground</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script>
+     process = { env: { NODE_ENV: '<%= Rails.env %>' } };
+    </script>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300&display=swap" rel="stylesheet">
@@ -10,14 +13,6 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <div id="root">
-    <h1>Test</h1>
-    </div>
-    <main>
-      <h1>Rails Todo Playground</h1>
-      <div class="container">
-        <%= yield %>
-      </div>
-    </main>
+    <%= yield %>
   </body>
 </html>

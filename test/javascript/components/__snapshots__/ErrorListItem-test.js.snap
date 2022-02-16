@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ErrorListItem/> should render 1`] = `
+"<li className=\\"error-list-item\\">
+  Test Error
+</li>"
+`;

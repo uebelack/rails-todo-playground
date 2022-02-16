@@ -12,6 +12,9 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
+      - name: Install npm dependencies
+        run: |
+          yarn install
       - name: Setup test database
         env:
           RAILS_ENV: test
@@ -20,13 +23,22 @@ jobs:
       - name: Run linters
         run: |
           bin/bundle exec rubocop
+          yarn lint
       - name: Run security checks
         run: |
           bin/bundle exec brakeman -q -w2
-      - name: Run tests
+      - name: Run backend tests
         run: |
           bin/rails test
-      - name: Coveralls
+      - name: Coveralls backend
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run frontend tests
+        run: |
+          yarn test:coverage
+      - name: Coveralls frontend
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      

@@ -1,0 +1,34 @@
+{
+  "name": "rails-todo-playground",
+  "version": "1.0.0",
+  "description": "My little rails playground",
+  "main": "index.js",
+  "repository": "git@github.com:hackercowboy/rails-todo-playground.git",
+  "author": "david@uebelacker.ch",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint --ext .js app/javascript",
+    "lint:fix": "eslint --fix --ext .js app/javascript",
+    "test:coverage": "jest --coverage",
+    "test": "jest --coverage --watch"
+  },
+  "dependencies": {
+    "axios": "^0.26.0",
+    "formik": "^2.2.9",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.3",
+    "@babel/preset-env": "^7.16.11",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
+    "babel-jest": "^27.5.1",
+    "enzyme": "^3.11.0",
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "jest": "^27.5.1",
+    "jest-react-hooks-shallow": "^1.5.1"
+  }
+}

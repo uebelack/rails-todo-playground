@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TodoListItem/> should render 1`] = `
+"<li className=\\"todo-list-item\\">
+  <span className=\\"todo-list-item-text pending\\">
+    Test
+  </span>
+  <span className=\\"todo-list-item-action\\">
+    <button className=\\"update-button\\" onClick={[Function: handleOnClick]}>
+      Done
+    </button>
+  </span>
+</li>"
+`;

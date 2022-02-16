@@ -1,0 +1,13 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "airbnb-base"
+    ],
+    "rules": {
+        "import/no-unresolved": "off"
+    },
+    "env": {
+        "browser": true,
+        "jest": true,
+    }
+}
