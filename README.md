@@ -30,6 +30,7 @@ This repository contains different branches with different tests of different te
 |---|---|
 | [classic](https://github.com/hackercowboy/rails-todo-playground/tree/classic) | classic ruby on rails application without any javascript |
 | [hotwire](https://github.com/hackercowboy/rails-todo-playground/tree/hotwire) | improved user experience of the classic application using hotwire to only rerender needed parts of the page |
+| [react-importmap](https://github.com/hackercowboy/rails-todo-playground/tree/react-importmap) | react version using importmap |
 
 
 ## License
