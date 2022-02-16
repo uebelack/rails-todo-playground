@@ -33,7 +33,7 @@ jobs:
           mv coverage/lcov.info coverage/backend.lcov.info
           yarn test:coverage
           mv coverage/lcov.info coverage/frontend.lcov.info
-          ./node_modules/.bin/lcov-result-merger coverage/*.lcov.info coverage/lcov.info
+          ./node_modules/.bin/lcov-result-merger 'coverage/*.lcov.info' 'coverage/lcov.info'
       - name: Coveralls frontend
         uses: coverallsapp/github-action@master
         with:
