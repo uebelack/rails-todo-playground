@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import htm from 'htm';
 
-const e = React.createElement;
+const html = htm.bind(React.createElement);
 
 const statusButtonClassMapping = {
   pending: 'update-button',
@@ -26,10 +27,15 @@ function TodoListItem({
     }
   };
 
-  return e('li', { className: 'todo-list-item' }, [
-    e('span', { className: `todo-list-item-text ${status}`, key: 'text' }, text),
-    e('span', { className: 'todo-list-item-action', key: 'action' }, e('button', { className: statusButtonClassMapping[status], onClick: handleOnClick }, statusButtonTextMapping[status])),
-  ]);
+  return html`
+    <li className="todo-list-item">
+      <span className="todo-list-item-text ${status}">${text}</span>
+      <span className="todo-list-item-action ${status}">
+        <button className="${statusButtonClassMapping[status]}" onClick="${handleOnClick}">
+          ${statusButtonTextMapping[status]}
+        </button>
+      </span>
+    </li>`;
 }
 
 TodoListItem.propTypes = {

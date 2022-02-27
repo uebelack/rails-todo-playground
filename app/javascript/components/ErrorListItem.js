@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import htm from 'htm';
 
-const e = React.createElement;
+const html = htm.bind(React.createElement);
 
 function ErrorListItem({ error }) {
-  return e('li', { className: 'error-list-item' }, error);
+  return html`<li className="error-list-item">${error}</li>`;
 }
 
 ErrorListItem.propTypes = {

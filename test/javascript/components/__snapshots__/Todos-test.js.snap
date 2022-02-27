@@ -4,6 +4,6 @@ exports[`<Todos/> should render 1`] = `
 "<Fragment>
   <TodoForm onSubmit={[Function: handleOnSubmit]} onError={[Function: handleOnError]} />
   <ErrorList errors={[undefined]} />
-  <TodoList todos={{...}} onDelete={[Function: handleOnDelete]} onDone={[Function: handleOnDone]} />
+  <TodoList todos={{...}} onDone={[Function: handleOnDone]} onDelete={[Function: handleOnDelete]} />
 </Fragment>"
 `;

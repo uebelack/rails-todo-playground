@@ -30,5 +30,6 @@ pin 'lodash-es/toPath', to: 'https://ga.jspm.io/npm:lodash-es@4.17.21/toPath.js'
 pin 'react-fast-compare', to: 'https://ga.jspm.io/npm:react-fast-compare@2.0.4/index.js'
 pin 'react-is', to: 'https://ga.jspm.io/npm:react-is@16.13.1/index.js'
 pin 'tiny-warning', to: 'https://ga.jspm.io/npm:tiny-warning@1.0.3/dist/tiny-warning.esm.js'
+pin 'htm', to: 'https://ga.jspm.io/npm:htm@3.1.0/dist/htm.module.js'
 
 pin 'application', preload: true

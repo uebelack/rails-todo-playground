@@ -1,17 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import htm from 'htm';
 import TodoListItem from './TodoListItem';
 
-const e = React.createElement;
+const html = htm.bind(React.createElement);
 
 function TodoList({ todos, onDelete, onDone }) {
-  return e(
-    'ul',
-    { className: 'todo-list' },
-    todos.map((todo) => e(TodoListItem, {
-      ...todo, key: todo.id, onDelete, onDone,
-    })),
-  );
+  return html`
+  <ul className="todo-list">
+    ${todos.map((todo) => html`
+      <${TodoListItem} 
+        key="${todo.id}"
+        id="${todo.id}"
+        status="${todo.status}"
+        text="${todo.text}"
+        onDelete="${onDelete}"
+        onDone="${onDone}"
+      />`)}
+  </ul>`;
 }
 
 TodoList.propTypes = {
