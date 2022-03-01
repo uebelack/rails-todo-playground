@@ -27,6 +27,10 @@ jobs:
       - name: Run security checks
         run: |
           bin/bundle exec brakeman -q -w2
+      - name: Run build
+        run: |
+          yarn build
+          bin/rails assets:precompile
       - name: Run tests
         run: |
           bin/rails test
