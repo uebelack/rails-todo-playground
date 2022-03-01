@@ -1,23 +1,19 @@
 /* eslint-disable import/prefer-default-export */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import htm from 'htm';
 
 import Todos from './components/Todos';
 
-const html = htm.bind(React.createElement);
-
 export function App() {
-  return html`
-    <main>
+  return (<main>
       <h1>Rails Todo Playground</h1>
       <div className="container">
-        <${Todos} />
+        <Todos />
       </div>
-    </main>`;
+    </main>);
 }
 
 ReactDOM.render(
-  html`<${App}/>`,
+  <App/>,
   document.getElementById('root'),
 );

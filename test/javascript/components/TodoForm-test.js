@@ -3,11 +3,9 @@ import { shallow } from 'enzyme';
 
 import TodoForm from '../../../app/javascript/components/TodoForm';
 
-const e = React.createElement;
-
 describe('<TodoForm/>', () => {
   it('should render', () => {
-    const wrapper = shallow(e(TodoForm));
+    const wrapper = shallow(<TodoForm onSubmit={jest.fn()} onError={jest.fn()} />);
     expect(wrapper.debug()).toMatchSnapshot();
   });
 
@@ -18,7 +16,7 @@ describe('<TodoForm/>', () => {
     const handleOnSubmit = jest.fn();
     const resetForm = jest.fn();
 
-    const wrapper = shallow(e(TodoForm, { onSubmit: handleOnSubmit }));
+    const wrapper = shallow(<TodoForm onSubmit={handleOnSubmit} onError={jest.fn()} />);
     await wrapper.find('Formik').props().onSubmit({ text: 'test' }, { resetForm });
 
     expect(handleOnSubmit).toHaveBeenCalledWith({ text: 'test' });
@@ -32,7 +30,7 @@ describe('<TodoForm/>', () => {
 
     const handleOnError = jest.fn();
     const handleOnSubmit = () => { throw error; };
-    const wrapper = shallow(e(TodoForm, { onSubmit: handleOnSubmit, onError: handleOnError }));
+    const wrapper = shallow(<TodoForm onSubmit={handleOnSubmit} onError={handleOnError} />);
     await wrapper.find('Formik').props().onSubmit({ text: '' });
 
     expect(handleOnError).toHaveBeenCalledWith(['Error 1', 'Error 2']);

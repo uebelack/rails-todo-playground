@@ -42,6 +42,6 @@ guard :livereload do
 
   watch(%r{app/views/.+\.(#{rails_view_exts * '|'})$})
   watch(%r{app/helpers/.+\.rb})
-  watch(%r{app/javascript/.+\.js})
+  watch(%r{app/build/.+\.js})
   watch(%r{config/locales/.+\.yml})
 end

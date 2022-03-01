@@ -32,6 +32,7 @@ This repository contains different branches with different tests of different te
 | [hotwire](https://github.com/hackercowboy/rails-todo-playground/tree/hotwire) | improved user experience of the classic application using hotwire to only rerender needed parts of the page |
 | [react-importmap](https://github.com/hackercowboy/rails-todo-playground/tree/react-importmap) | react version using importmap, without JSX |
 | [react-importmap-htm](https://github.com/hackercowboy/rails-todo-playground/tree/react-importmap-htm) | react version using importmap and htm as replacement for JSX |
+| [react-webpack](https://github.com/hackercowboy/rails-todo-playground/tree/webpack) | react version using webpack as bundler |
 
 
 ## License

@@ -1,8 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import htm from 'htm';
-
-const html = htm.bind(React.createElement);
 
 const statusButtonClassMapping = {
   pending: 'update-button',
@@ -27,15 +24,15 @@ function TodoListItem({
     }
   };
 
-  return html`
+  return (
     <li className="todo-list-item">
-      <span className="todo-list-item-text ${status}">${text}</span>
-      <span className="todo-list-item-action ${status}">
-        <button className="${statusButtonClassMapping[status]}" onClick="${handleOnClick}">
-          ${statusButtonTextMapping[status]}
+      <span className={`todo-list-item-text ${status}`}>{text}</span>
+      <span className={`todo-list-item-action ${status}`}>
+        <button className={statusButtonClassMapping[status]} onClick={handleOnClick}>
+          {statusButtonTextMapping[status]}
         </button>
       </span>
-    </li>`;
+    </li>);
 }
 
 TodoListItem.propTypes = {

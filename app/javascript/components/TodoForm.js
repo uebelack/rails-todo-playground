@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Formik, Field, Form } from 'formik';
-import htm from 'htm';
-
-const html = htm.bind(React.createElement);
 
 function TodoForm({ onSubmit, onError }) {
   const [fetching, setFetching] = useState(false);
@@ -30,22 +27,22 @@ function TodoForm({ onSubmit, onError }) {
     }
   });
 
-  return html`
-    <${Formik} initialValues="${{ text: '' }}" onSubmit="${handleOnSubmit}">
-      <${Form} className="todo-form">
-        <${Field}
+  return (
+    <Formik initialValues={{ text: '' }} onSubmit={handleOnSubmit}>
+      <Form className="todo-form">
+        <Field
           id="text"
           name="text"
           type="text"
           placeholder="Add new Todo"
-          disabled="${fetching}"
-          innerRef="${input}"
+          disabled={fetching}
+          innerRef={input}
         />
-      <//>
-    <//>`;
+      </Form>
+    </Formik>);
 }
 
-PropTypes.propTypes = {
+TodoForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
   onError: PropTypes.func.isRequired,
 };

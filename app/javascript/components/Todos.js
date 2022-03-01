@@ -1,12 +1,9 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import axios from 'axios';
-import htm from 'htm';
 
 import ErrorList from './ErrorList';
 import TodoForm from './TodoForm';
 import TodoList from './TodoList';
-
-const html = htm.bind(React.createElement);
 
 function headers() {
   return {
@@ -48,12 +45,13 @@ function Todos() {
     await loadData();
   };
 
-  return html`
-    <${Fragment}>
-      <${TodoForm} onSubmit=${handleOnSubmit} onError=${handleOnError} />
-      <${ErrorList} errors=${errors} />
-      <${TodoList} todos=${todos} onDone=${handleOnDone} onDelete=${handleOnDelete} />
-    <//>`;
+  return (
+    <>
+      <TodoForm onSubmit={handleOnSubmit} onError={handleOnError} />
+      <ErrorList errors={errors} />
+      <TodoList todos={todos} onDone={handleOnDone} onDelete={handleOnDelete} />
+    </>
+  );
 }
 
 export default Todos;

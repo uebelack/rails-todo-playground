@@ -1,16 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import htm from 'htm';
 
 import ErrorListItem from './ErrorListItem';
 
-const html = htm.bind(React.createElement);
-
 function ErrorList({ errors }) {
-  return errors ? html`
-    <ul className="error-list">
-      ${errors.map((error) => html`<${ErrorListItem} key="${error}" error="${error}"/>`)}
-    </ul>` : null;
+  return errors ? (<ul className="error-list">
+      {errors.map((error) => <ErrorListItem key={error} error={error}/>)}
+    </ul>) : null;
 }
 
 ErrorList.propTypes = {
