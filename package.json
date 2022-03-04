@@ -11,11 +11,13 @@
     "lint:fix": "eslint --fix --ext .js app/javascript",
     "test:coverage": "jest --coverage",
     "test": "jest --coverage --watch",
-    "build": "webpack --config webpack.config.js",
-    "watch": "webpack --config webpack.config.js --watch --mode development"    
+    "start": "bin/dev",
+    "build": "esbuild app/javascript/**/*.* --bundle --sourcemap --outdir=app/assets/builds --loader:.js=jsx",
+    "watch": "webpack --config webpack.config.js --watch --mode development"
   },
   "dependencies": {
     "axios": "^0.26.0",
+    "esbuild": "^0.14.23",
     "formik": "^2.2.9",
     "htm": "^3.1.0",
     "prop-types": "^15.8.1",
