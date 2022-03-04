@@ -11,8 +11,9 @@
     "lint:fix": "eslint --fix --ext .js app/javascript",
     "test:coverage": "jest --coverage",
     "test": "jest --coverage --watch",
+    "start": "bin/dev",
     "build": "webpack --config webpack.config.js",
-    "watch": "webpack --config webpack.config.js --watch --mode development"    
+    "watch": "webpack --config webpack.config.js --watch --mode development"
   },
   "dependencies": {
     "axios": "^0.26.0",
