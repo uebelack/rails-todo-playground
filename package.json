@@ -12,8 +12,8 @@
     "test:coverage": "jest --coverage",
     "test": "jest --coverage --watch",
     "start": "bin/dev",
-    "build": "esbuild app/javascript/**/*.* --bundle --sourcemap --outdir=app/assets/builds --loader:.js=jsx",
-    "watch": "webpack --config webpack.config.js --watch --mode development"
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --loader:.js=jsx",
+    "watch": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --loader:.js=jsx --watch"
   },
   "dependencies": {
     "axios": "^0.26.0",
@@ -22,9 +22,7 @@
     "htm": "^3.1.0",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "webpack": "^5.69.1",
-    "webpack-cli": "^4.9.2"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.17.3",

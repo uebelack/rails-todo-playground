@@ -1,4 +1,4 @@
 web: bundle exec rails s
 guard: bundle exec guard
 js: yarn watch
-js: yarn build --watch
+
