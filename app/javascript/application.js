@@ -6,7 +6,7 @@ import Todos from './components/Todos';
 
 export function App() {
   return (<main>
-      <h1>Rails Todo Playground 2</h1>
+      <h1>Rails Todo Playground</h1>
       <div className="container">
         <Todos />
       </div>

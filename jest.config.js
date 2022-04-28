@@ -12,4 +12,15 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
   testMatch: ['**/test/javascript/**/*-test.js'],
+  transform: {
+    '^.+\\.jsx?$': [
+      'esbuild-jest',
+      {
+        sourcemap: true,
+        loaders: {
+          '.js': 'jsx',
+        },
+      },
+    ],
+  },
 };
