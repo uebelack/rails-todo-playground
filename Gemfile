@@ -6,9 +6,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.1.0'
 
 gem 'jbuilder'
-gem 'jsbundling-rails'
+gem 'mini_racer', platforms: :ruby
 gem 'puma'
 gem 'rails', '~> 7.0.1'
+gem 'react_on_rails'
+gem 'shakapacker'
 gem 'sprockets-rails'
 gem 'sqlite3'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
@@ -21,8 +23,7 @@ end
 
 group :development do
   gem 'brakeman'
-  gem 'guard-livereload'
-  gem 'rack-livereload'
+  gem 'foreman'
   gem 'rubocop'
   gem 'rubocop-rails'
   gem 'spring'

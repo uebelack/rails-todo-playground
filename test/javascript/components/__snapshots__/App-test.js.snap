@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`application should work 1`] = `
+exports[`<App/> should render  1`] = `
 "<main>
   <h1>
     Rails Todo Playground

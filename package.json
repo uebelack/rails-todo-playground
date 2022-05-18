@@ -11,29 +11,58 @@
     "lint:fix": "eslint --fix --ext .js app/javascript",
     "test:coverage": "jest --coverage",
     "test": "jest --coverage --watch",
-    "start": "bin/dev",
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --loader:.js=jsx",
-    "watch": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --loader:.js=jsx --watch"
+    "start": "bundle exec foreman start -f Procfile.dev"
   },
+  "babel": {
+    "presets": [
+      "./node_modules/shakapacker/package/babel/preset.js"
+    ]
+  },
+  "browserslist": [
+    "defaults"
+  ],
   "dependencies": {
-    "axios": "^0.26.0",
-    "esbuild": "^0.14.23",
+    "axios": "^0.27.2",
     "formik": "^2.2.9",
+    "htm": "^3.1.0",
     "prop-types": "^15.8.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-on-rails": "13.0.2"
   },
   "devDependencies": {
+    "@babel/core": "7",
+    "@babel/plugin-transform-runtime": "7",
+    "@babel/preset-env": "7",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/runtime": "7",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
+    "babel-jest": "^28.1.0",
+    "babel-loader": "8",
+    "babel-plugin-macros": "^3.1.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "compression-webpack-plugin": "9",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^3.4.1",
     "enzyme": "^3.11.0",
-    "esbuild-jest": "^0.5.0",
     "eslint": "^8.9.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-htm": "^0.3.1",
+    "eslint-plugin-htm": "^0.4.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-react": "^7.29.2",
     "jest": "^27.5.1",
     "jest-react-hooks-shallow": "^1.5.1",
-    "lcov-result-merger": "^3.1.0"
+    "lcov-result-merger": "^3.1.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "react-refresh": "^0.13.0",
+    "shakapacker": "6.2.1",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "5",
+    "webpack": "5",
+    "webpack-assets-manifest": "5",
+    "webpack-cli": "4",
+    "webpack-dev-server": "^4.9.0",
+    "webpack-merge": "5"
   }
 }
