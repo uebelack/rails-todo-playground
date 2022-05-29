@@ -13,13 +13,14 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'faker'
   gem 'guard'
   gem 'guard-minitest'
 end
 
 group :development do
   gem 'brakeman'
+  gem 'guard-livereload'
+  gem 'rack-livereload'
   gem 'rubocop'
   gem 'rubocop-rails'
   gem 'spring'
@@ -27,9 +28,9 @@ end
 
 group :test do
   gem 'factory_bot'
+  gem 'faker'
   gem 'minitest-reporters'
   gem 'shoulda'
   gem 'simplecov'
   gem 'simplecov-lcov'
-  gem 'test-unit'
 end
