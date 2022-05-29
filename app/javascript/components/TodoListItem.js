@@ -28,7 +28,7 @@ function TodoListItem({
     <li className="todo-list-item">
       <span className={`todo-list-item-text ${status}`}>{text}</span>
       <span className={`todo-list-item-action ${status}`}>
-        <button className={statusButtonClassMapping[status]} onClick={handleOnClick}>
+        <button className={statusButtonClassMapping[status]} onClick={handleOnClick} role="button">
           {statusButtonTextMapping[status]}
         </button>
       </span>

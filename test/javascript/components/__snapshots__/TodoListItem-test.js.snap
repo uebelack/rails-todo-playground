@@ -1,14 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TodoListItem/> should render 1`] = `
-"<li className=\\"todo-list-item\\">
-  <span className=\\"todo-list-item-text pending\\">
-    Test
-  </span>
-  <span className=\\"todo-list-item-action pending\\">
-    <button className=\\"update-button\\" onClick={[Function: handleOnClick]}>
-      Done
-    </button>
-  </span>
-</li>"
+"[36m<body>[39m
+  [36m<div>[39m
+    [36m<li[39m
+      [33mclass[39m=[32m\\"todo-list-item\\"[39m
+    [36m>[39m
+      [36m<span[39m
+        [33mclass[39m=[32m\\"todo-list-item-text pending\\"[39m
+      [36m>[39m
+        [0mTest[0m
+      [36m</span>[39m
+      [36m<span[39m
+        [33mclass[39m=[32m\\"todo-list-item-action pending\\"[39m
+      [36m>[39m
+        [36m<button[39m
+          [33mclass[39m=[32m\\"update-button\\"[39m
+          [33mrole[39m=[32m\\"button\\"[39m
+        [36m>[39m
+          [0mDone[0m
+        [36m</button>[39m
+      [36m</span>[39m
+    [36m</li>[39m
+  [36m</div>[39m
+[36m</body>[39m"
 `;

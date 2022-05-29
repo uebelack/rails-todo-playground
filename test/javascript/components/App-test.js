@@ -1,11 +1,11 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render, prettyDOM } from '@testing-library/react';
 
 import App from '../../../app/javascript/components/App';
 
 describe('<App/>', () => {
   it('should render ', () => {
-    const wrapper = shallow(<App/>);
-    expect(wrapper.debug()).toMatchSnapshot();
+    render(<App/>);
+    expect(prettyDOM()).toMatchSnapshot();
   });
 });

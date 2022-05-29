@@ -10,6 +10,6 @@ module.exports = {
   collectCoverageFrom: ['app/javascript/components/**/*.js'],
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/vendor/'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  testEnvironment: 'jest-environment-jsdom',
+  testEnvironment: 'jsdom',
   testMatch: ['**/test/javascript/**/*-test.js'],
 };
