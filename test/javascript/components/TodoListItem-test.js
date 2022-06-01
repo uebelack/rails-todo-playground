@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render, prettyDOM, screen } from '@testing-library/react';
 
 import TodoListItem from '../../../app/javascript/components/TodoListItem';
 
@@ -7,29 +7,29 @@ const e = React.createElement;
 
 describe('<TodoListItem/>', () => {
   it('should render', () => {
-    const wrapper = shallow(e(TodoListItem, {
+    render(e(TodoListItem, {
       id: 32, status: 'pending', text: 'Test', onDone: jest.fn(), onDelete: jest.fn(),
     }));
-    expect(wrapper.debug()).toMatchSnapshot();
+    expect(prettyDOM()).toMatchSnapshot();
   });
 
   it('should call onDone', () => {
     const handleOnDone = jest.fn();
 
-    const wrapper = shallow(e(TodoListItem, {
+    render(e(TodoListItem, {
       id: 32, status: 'pending', text: 'Test', onDone: handleOnDone, onDelete: jest.fn(),
     }));
-    wrapper.find('button').props().onClick();
+    screen.getByRole('button').click();
     expect(handleOnDone).toHaveBeenCalledWith(32);
   });
 
   it('should call onDelete', () => {
     const handleOnDelete = jest.fn();
 
-    const wrapper = shallow(e(TodoListItem, {
+    render(e(TodoListItem, {
       id: 32, status: 'done', text: 'Test', onDone: jest.fn(), onDelete: handleOnDelete,
     }));
-    wrapper.find('button').props().onClick();
+    screen.getByRole('button').click();
     expect(handleOnDelete).toHaveBeenCalledWith(32);
   });
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render, prettyDOM } from '@testing-library/react';
 
 import ErrorListItem from '../../../app/javascript/components/ErrorListItem';
 
@@ -7,7 +7,7 @@ const e = React.createElement;
 
 describe('<ErrorListItem/>', () => {
   it('should render', () => {
-    const wrapper = shallow(e(ErrorListItem, { error: 'Test Error' }));
-    expect(wrapper.debug()).toMatchSnapshot();
+    render(e(ErrorListItem, { error: 'Test Error' }));
+    expect(prettyDOM()).toMatchSnapshot();
   });
 });

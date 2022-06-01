@@ -1,7 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TodoList/> should render 1`] = `
-"<ul className=\\"todo-list\\">
-  <TodoListItem id={32} text=\\"Test\\" status=\\"pending\\" onDelete={[Function: mockConstructor] { _isMockFunction: true, getMockImplementation: [Function (anonymous)], mock: Object [Object: null prototype] { calls: [], instances: [], invocationCallOrder: [], results: [] }, mockClear: [Function (anonymous)], mockReset: [Function (anonymous)], mockRestore: [Function (anonymous)], mockReturnValueOnce: [Function (anonymous)], mockResolvedValueOnce: [Function (anonymous)], mockRejectedValueOnce: [Function (anonymous)], mockReturnValue: [Function (anonymous)], mockResolvedValue: [Function (anonymous)], mockRejectedValue: [Function (anonymous)], mockImplementationOnce: [Function (anonymous)], mockImplementation: [Function (anonymous)], mockReturnThis: [Function (anonymous)], mockName: [Function (anonymous)], getMockName: [Function (anonymous)] }} onDone={[Function: mockConstructor] { _isMockFunction: true, getMockImplementation: [Function (anonymous)], mock: Object [Object: null prototype] { calls: [], instances: [], invocationCallOrder: [], results: [] }, mockClear: [Function (anonymous)], mockReset: [Function (anonymous)], mockRestore: [Function (anonymous)], mockReturnValueOnce: [Function (anonymous)], mockResolvedValueOnce: [Function (anonymous)], mockRejectedValueOnce: [Function (anonymous)], mockReturnValue: [Function (anonymous)], mockResolvedValue: [Function (anonymous)], mockRejectedValue: [Function (anonymous)], mockImplementationOnce: [Function (anonymous)], mockImplementation: [Function (anonymous)], mockReturnThis: [Function (anonymous)], mockName: [Function (anonymous)], getMockName: [Function (anonymous)] }} />
-</ul>"
+"[36m<body>[39m
+  [36m<div>[39m
+    [36m<ul[39m
+      [33mclass[39m=[32m\\"todo-list\\"[39m
+    [36m>[39m
+      [36m<li[39m
+        [33mclass[39m=[32m\\"todo-list-item\\"[39m
+      [36m>[39m
+        [36m<span[39m
+          [33mclass[39m=[32m\\"todo-list-item-text pending\\"[39m
+        [36m>[39m
+          [0mTest[0m
+        [36m</span>[39m
+        [36m<span[39m
+          [33mclass[39m=[32m\\"todo-list-item-action\\"[39m
+        [36m>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m\\"update-button\\"[39m
+          [36m>[39m
+            [0mDone[0m
+          [36m</button>[39m
+        [36m</span>[39m
+      [36m</li>[39m
+    [36m</ul>[39m
+  [36m</div>[39m
+[36m</body>[39m"
 `;

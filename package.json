@@ -10,26 +10,26 @@
     "lint": "eslint --ext .js app/javascript",
     "lint:fix": "eslint --fix --ext .js app/javascript",
     "test:coverage": "jest --coverage",
-    "test": "jest --coverage --watch"
+    "test": "jest --coverage --watch",
+    "start": "bundle exec foreman start -f Procfile.dev"
   },
   "dependencies": {
-    "axios": "^0.26.0",
+    "axios": "^0.27.2",
     "formik": "^2.2.9",
     "prop-types": "^15.8.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.3",
-    "@babel/preset-env": "^7.16.11",
-    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
-    "babel-jest": "^27.5.1",
-    "enzyme": "^3.11.0",
-    "eslint": "^8.9.0",
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@testing-library/react": "^13.3.0",
+    "babel-jest": "^28.1.0",
+    "eslint": "^8.16.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.4",
-    "jest": "^27.5.1",
-    "jest-react-hooks-shallow": "^1.5.1",
-    "lcov-result-merger": "^3.1.0"
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^28.1.0",
+    "jest-environment-jsdom": "^28.1.0",
+    "lcov-result-merger": "^3.2.0"
   }
 }
