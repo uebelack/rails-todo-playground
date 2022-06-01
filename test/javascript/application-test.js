@@ -1,12 +1,8 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import { App } from '../../app/javascript/application';
-
-jest.mock('react-dom');
+jest.mock('react-dom/client', () => ({ createRoot: () => ({ render: () => jest.fn() }) }));
 
 describe('application', () => {
   it('should work', () => {
-    const wrapper = shallow(<App/>);
-    expect(wrapper.debug()).toMatchSnapshot();
+    // eslint-disable-next-line global-require
+    require('../../app/javascript/application');
   });
 });

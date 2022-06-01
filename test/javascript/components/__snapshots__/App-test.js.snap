@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App/> should render  1`] = `
+"[36m<body>[39m
+  [36m<div>[39m
+    [36m<main>[39m
+      [36m<h1>[39m
+        [0mRails Todo Playground[0m
+      [36m</h1>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m\\"container\\"[39m
+      [36m>[39m
+        [36m<form[39m
+          [33maction[39m=[32m\\"#\\"[39m
+          [33mclass[39m=[32m\\"todo-form\\"[39m
+          [33mdata-testid[39m=[32m\\"todo-form\\"[39m
+        [36m>[39m
+          [36m<input[39m
+            [33mdata-testid[39m=[32m\\"todo-form-input\\"[39m
+            [33mid[39m=[32m\\"text\\"[39m
+            [33mname[39m=[32m\\"text\\"[39m
+            [33mplaceholder[39m=[32m\\"Add new Todo\\"[39m
+            [33mtype[39m=[32m\\"text\\"[39m
+            [33mvalue[39m=[32m\\"\\"[39m
+          [36m/>[39m
+        [36m</form>[39m
+        [36m<ul[39m
+          [33mclass[39m=[32m\\"todo-list\\"[39m
+        [36m/>[39m
+      [36m</div>[39m
+    [36m</main>[39m
+  [36m</div>[39m
+[36m</body>[39m"
+`;

@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ErrorListItem/> should render 1`] = `
-"<li className=\\"error-list-item\\">
-  Test Error
-</li>"
+"[36m<body>[39m
+  [36m<div>[39m
+    [36m<li[39m
+      [33mclass[39m=[32m\\"error-list-item\\"[39m
+    [36m>[39m
+      [0mTest Error[0m
+    [36m</li>[39m
+  [36m</div>[39m
+[36m</body>[39m"
 `;

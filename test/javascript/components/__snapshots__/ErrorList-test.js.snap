@@ -1,10 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ErrorList/> should render with errors 1`] = `
-"<ul className=\\"error-list\\">
-  <ErrorListItem error=\\"error1\\" />
-  <ErrorListItem error=\\"error2\\" />
-</ul>"
+"[36m<body>[39m
+  [36m<div>[39m
+    [36m<ul[39m
+      [33mclass[39m=[32m\\"error-list\\"[39m
+    [36m>[39m
+      [36m<li[39m
+        [33mclass[39m=[32m\\"error-list-item\\"[39m
+      [36m>[39m
+        [0merror1[0m
+      [36m</li>[39m
+      [36m<li[39m
+        [33mclass[39m=[32m\\"error-list-item\\"[39m
+      [36m>[39m
+        [0merror2[0m
+      [36m</li>[39m
+    [36m</ul>[39m
+  [36m</div>[39m
+[36m</body>[39m"
 `;
 
-exports[`<ErrorList/> should render without errors 1`] = `""`;
+exports[`<ErrorList/> should render without errors 1`] = `
+"[36m<body>[39m
+  [36m<div />[39m
+[36m</body>[39m"
+`;

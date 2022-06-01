@@ -15,21 +15,17 @@ function TodoForm({ onSubmit, onError }) {
       onError(error.response.data.errors);
     } finally {
       setFetching(false);
-      if (input.current) {
-        input.current.focus();
-      }
+      input.current.focus();
     }
   };
 
   useEffect(() => {
-    if (input.current) {
-      input.current.focus();
-    }
+    input.current.focus();
   });
 
   return (
-    <Formik initialValues={{ text: '' }} onSubmit={handleOnSubmit}>
-      <Form className="todo-form">
+    <Formik initialValues={{ text: '' }} onSubmit={handleOnSubmit} role="form">
+      <Form className="todo-form" data-testid="todo-form">
         <Field
           id="text"
           name="text"
@@ -37,6 +33,7 @@ function TodoForm({ onSubmit, onError }) {
           placeholder="Add new Todo"
           disabled={fetching}
           innerRef={input}
+          data-testid="todo-form-input"
         />
       </Form>
     </Formik>);
