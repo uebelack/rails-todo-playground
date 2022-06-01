@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render, prettyDOM } from '@testing-library/react';
 
 import ErrorList from '../../../app/javascript/components/ErrorList';
 
@@ -7,12 +7,12 @@ const e = React.createElement;
 
 describe('<ErrorList/>', () => {
   it('should render without errors', () => {
-    const wrapper = shallow(e(ErrorList));
-    expect(wrapper.debug()).toMatchSnapshot();
+    render(e(ErrorList));
+    expect(prettyDOM()).toMatchSnapshot();
   });
 
   it('should render with errors', () => {
-    const wrapper = shallow(e(ErrorList, { errors: ['error1', 'error2'] }));
-    expect(wrapper.debug()).toMatchSnapshot();
+    render(e(ErrorList, { errors: ['error1', 'error2'] }));
+    expect(prettyDOM()).toMatchSnapshot();
   });
 });
