@@ -33,6 +33,7 @@ This repository contains different branches with different tests of different te
 | [react-importmap](https://github.com/hackercowboy/rails-todo-playground/tree/react-importmap) | react version using importmap, without JSX |
 | [react-importmap-htm](https://github.com/hackercowboy/rails-todo-playground/tree/react-importmap-htm) | react version using importmap and htm as replacement for JSX |
 | [react-webpack](https://github.com/hackercowboy/rails-todo-playground/tree/react-webpack) | react version using webpack as bundler |
+| [react-esbuild](https://github.com/hackercowboy/rails-todo-playground/tree/react-esbuild) | react version using esbuild as bundler |
 
 
 ## License
