@@ -1,16 +1,16 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render, prettyDOM } from '@testing-library/react';
 
 import ErrorList from '../../../app/javascript/components/ErrorList';
 
 describe('<ErrorList/>', () => {
   it('should render without errors', () => {
-    const wrapper = shallow(<ErrorList/>);
-    expect(wrapper.debug()).toMatchSnapshot();
+    render(<ErrorList/>);
+    expect(prettyDOM()).toMatchSnapshot();
   });
 
   it('should render with errors', () => {
-    const wrapper = shallow(<ErrorList errors={['error1', 'error2']}/>);
-    expect(wrapper.debug()).toMatchSnapshot();
+    render(<ErrorList errors={['error1', 'error2']}/>);
+    expect(prettyDOM()).toMatchSnapshot();
   });
 });

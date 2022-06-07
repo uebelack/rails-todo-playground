@@ -1,9 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Todos/> should handleErrors 1`] = `
+"[36m<body>[39m
+  [36m<div>[39m
+    [36m<form[39m
+      [33maction[39m=[32m\\"#\\"[39m
+      [33mclass[39m=[32m\\"todo-form\\"[39m
+      [33mdata-testid[39m=[32m\\"todo-form\\"[39m
+    [36m>[39m
+      [36m<input[39m
+        [33mdata-testid[39m=[32m\\"todo-form-input\\"[39m
+        [33mid[39m=[32m\\"text\\"[39m
+        [33mname[39m=[32m\\"text\\"[39m
+        [33mplaceholder[39m=[32m\\"Add new Todo\\"[39m
+        [33mtype[39m=[32m\\"text\\"[39m
+        [33mvalue[39m=[32m\\"Test Todo\\"[39m
+      [36m/>[39m
+    [36m</form>[39m
+    [36m<ul[39m
+      [33mclass[39m=[32m\\"error-list\\"[39m
+    [36m>[39m
+      [36m<li[39m
+        [33mclass[39m=[32m\\"error-list-item\\"[39m
+      [36m>[39m
+        [0mError 1[0m
+      [36m</li>[39m
+      [36m<li[39m
+        [33mclass[39m=[32m\\"error-list-item\\"[39m
+      [36m>[39m
+        [0mError 2[0m
+      [36m</li>[39m
+    [36m</ul>[39m
+    [36m<ul[39m
+      [33mclass[39m=[32m\\"todo-list\\"[39m
+    [36m/>[39m
+  [36m</div>[39m
+[36m</body>[39m"
+`;
+
 exports[`<Todos/> should render 1`] = `
-"<Fragment>
-  <TodoForm onSubmit={[Function: handleOnSubmit]} onError={[Function: handleOnError]} />
-  <ErrorList errors={[undefined]} />
-  <TodoList todos={{...}} onDone={[Function: handleOnDone]} onDelete={[Function: handleOnDelete]} />
-</Fragment>"
+"[36m<body>[39m
+  [36m<div>[39m
+    [36m<form[39m
+      [33maction[39m=[32m\\"#\\"[39m
+      [33mclass[39m=[32m\\"todo-form\\"[39m
+      [33mdata-testid[39m=[32m\\"todo-form\\"[39m
+    [36m>[39m
+      [36m<input[39m
+        [33mdata-testid[39m=[32m\\"todo-form-input\\"[39m
+        [33mid[39m=[32m\\"text\\"[39m
+        [33mname[39m=[32m\\"text\\"[39m
+        [33mplaceholder[39m=[32m\\"Add new Todo\\"[39m
+        [33mtype[39m=[32m\\"text\\"[39m
+        [33mvalue[39m=[32m\\"\\"[39m
+      [36m/>[39m
+    [36m</form>[39m
+    [36m<ul[39m
+      [33mclass[39m=[32m\\"todo-list\\"[39m
+    [36m>[39m
+      [36m<li[39m
+        [33mclass[39m=[32m\\"todo-list-item\\"[39m
+      [36m>[39m
+        [36m<span[39m
+          [33mclass[39m=[32m\\"todo-list-item-text pending\\"[39m
+        [36m>[39m
+          [0mTest[0m
+        [36m</span>[39m
+        [36m<span[39m
+          [33mclass[39m=[32m\\"todo-list-item-action pending\\"[39m
+        [36m>[39m
+          [36m<button[39m
+            [33mclass[39m=[32m\\"update-button\\"[39m
+          [36m>[39m
+            [0mDone[0m
+          [36m</button>[39m
+        [36m</span>[39m
+      [36m</li>[39m
+    [36m</ul>[39m
+  [36m</div>[39m
+[36m</body>[39m"
 `;
