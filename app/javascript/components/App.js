@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import React from 'react';
 import htm from 'htm';
 import Todos from './Todos';
